@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine, Column, Integer, String, Date
 from sqlalchemy.orm import declarative_base, sessionmaker
-from datetime import date
+#from datetime import date
 
 # Create an SQLite database connection
 engine = create_engine("sqlite:///mydatabase.db")
