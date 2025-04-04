@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Student Details</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 40px; background-color: #f4f4f9; }
+        h2 { color: #333; }
+        ul { background: #fff; padding: 20px; border-radius: 8px; list-style-type: none; }
+        li { margin-bottom: 15px; }
+        strong { color: #007BFF; }
+        a { margin-top: 20px; display: inline-block; color: #007BFF; text-decoration: none; }
+    </style>
+</head>
+<body>
+<h2>All Students - Formatted View</h2>
+<ul>
+{% for s in students %}
+    <li><strong>ID:</strong> {{ s.student_id }} |
+        <strong>Name:</strong> {{ s.first_name }} {{ s.last_name }} |
+        <strong>DOB:</strong> {{ s.dob }} |
+        <strong>Due:</strong> {{ s.amount_due }}</li>
+{% endfor %}
+</ul>
+<a href="/">← Back to Home</a>
+</body>
+</html>

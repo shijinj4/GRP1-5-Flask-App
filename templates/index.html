@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Records</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 40px; background-color: #f4f4f9; }
+        h2 { color: #333; }
+        table { width: 100%; border-collapse: collapse; background: #fff; }
+        th, td { padding: 12px 15px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #007BFF; color: white; }
+        .button-container { margin: 20px 0; }
+        .button {
+            text-decoration: none; padding: 10px 15px; background-color: #007BFF;
+            color: white; border-radius: 5px; margin-right: 10px; font-weight: bold;
+        }
+        .button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+<h2>Student Records</h2>
+<table>
+<tr><th>ID</th><th>First Name</th><th>Last Name</th><th>DOB</th><th>Amount Due</th></tr>
+{% for s in students %}
+<tr>
+<td>{{ s.student_id }}</td>
+<td>{{ s.first_name }}</td>
+<td>{{ s.last_name }}</td>
+<td>{{ s.dob }}</td>
+<td>{{ s.amount_due }}</td>
+</tr>
+{% endfor %}
+</table>
+<div class="button-container">
+    <a class="button" href="/add">Add Student</a>
+    <a class="button" href="/update">Update Student</a>
+    <a class="button" href="/delete">Delete Student</a>
+    <a class="button" href="/show">Show All (Formatted)</a>
+</div>
+</body>
+</html>

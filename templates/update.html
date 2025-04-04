@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Student</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 40px; background-color: #f4f4f9; }
+        form { background: #fff; padding: 20px; border-radius: 8px; width: 350px; }
+        label { font-weight: bold; display: block; margin-top: 10px; }
+        input[type="text"], input[type="number"] {
+            width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 15px; box-sizing: border-box;
+        }
+        input[type="submit"] {
+            padding: 10px 20px; background: #28a745; color: white;
+            border: none; border-radius: 5px; cursor: pointer;
+        }
+        input[type="submit"]:hover { background-color: #1e7e34; }
+        a { display: block; margin-top: 15px; color: #007BFF; }
+    </style>
+</head>
+<body>
+<h2>Update Student</h2>
+<form method="post">
+    <label>Student ID</label>
+    <input name="student_id" type="number" required>
+    <label>First Name</label>
+    <input name="first_name" type="text">
+    <label>Last Name</label>
+    <input name="last_name" type="text">
+    <label>DOB (YYYY-MM-DD)</label>
+    <input name="dob" type="text">
+    <label>Amount Due</label>
+    <input name="amount_due" type="number">
+    <input type="submit" value="Update Student">
+</form>
+<a href="/">← Back to Home</a>
+</body>
+</html>
