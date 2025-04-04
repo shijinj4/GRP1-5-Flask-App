@@ -64,6 +64,17 @@ def show_students_web():
     students = session.query(StudentProfile).all()
     return render_template('show.html', students=students)
 
+@app.route('/read', methods=['GET', 'POST'])
+def read_student():
+    if request.method == 'POST':
+        student_id = request.form['student_id']
+        student = session.query(StudentProfile).get(student_id)
+        if student:
+            return render_template('read.html', student=student)
+        else:
+            return render_template('read.html', error="Student not found.")
+    return render_template('read.html')
+
 # =========================
 # API Routes
 # =========================
